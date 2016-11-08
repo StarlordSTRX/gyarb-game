@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{7CF2ACD3-37AF-B3CA-9568-B554C5DDFA8F}") = "gyarb-rel-01", "Assembly-CSharp-firstpass.csproj", "{AD3849E1-C712-357C-FD80-566B0D77093B}"
+EndProject
+Project("{7CF2ACD3-37AF-B3CA-9568-B554C5DDFA8F}") = "gyarb-rel-01", "Assembly-CSharp.csproj", "{A86E2CD9-574D-0857-A2E5-EE91A279B84F}"
+EndProject
+Project("{7CF2ACD3-37AF-B3CA-9568-B554C5DDFA8F}") = "gyarb-rel-01", "Assembly-CSharp-Editor.csproj", "{C9E7284B-69A8-8E82-7016-CB7A3DD19A84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD3849E1-C712-357C-FD80-566B0D77093B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD3849E1-C712-357C-FD80-566B0D77093B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD3849E1-C712-357C-FD80-566B0D77093B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD3849E1-C712-357C-FD80-566B0D77093B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A86E2CD9-574D-0857-A2E5-EE91A279B84F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86E2CD9-574D-0857-A2E5-EE91A279B84F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86E2CD9-574D-0857-A2E5-EE91A279B84F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86E2CD9-574D-0857-A2E5-EE91A279B84F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9E7284B-69A8-8E82-7016-CB7A3DD19A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E7284B-69A8-8E82-7016-CB7A3DD19A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E7284B-69A8-8E82-7016-CB7A3DD19A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E7284B-69A8-8E82-7016-CB7A3DD19A84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
