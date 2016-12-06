@@ -8,11 +8,12 @@ public class displayUI : MonoBehaviour {
     public Text myText;
     public float fadeTime;
     public bool displayInfo;
-
+    public GameObject target;
 	// Use this for initialization
 	void Start () {
         myText = GameObject.Find("Text").GetComponent<Text>();
         myText.color = Color.clear;
+        target = GameObject.FindWithTag("Player");
         //Screen.showCursor = false;
         //Screen.lockCursor = true;
 	}
@@ -20,7 +21,6 @@ public class displayUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         FadeText();
-
         /*if (Input.GetKeyDown (KeyCode.Escape)) 
          
                 {
@@ -47,7 +47,6 @@ public class displayUI : MonoBehaviour {
 
     void FadeText()
     {
-
 
         if (displayInfo)
         {
