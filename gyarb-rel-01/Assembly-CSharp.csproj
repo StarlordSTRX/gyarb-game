@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ActivateGenerator.cs" />
+     <Compile Include="Assets\Scripts\Healthbar.cs" />
      <Compile Include="Assets\Scripts\RayViewer.cs" />
      <Compile Include="Assets\Scripts\RaycastShoot.cs" />
      <Compile Include="Assets\Scripts\ShootableEntity.cs" />
