@@ -28,7 +28,7 @@ public class Healthbar : MonoBehaviour {
         if (hitpoint <= 0)
         {
             hitpoint = 0;
-            Debug.Log("DIE DIE DIE (That means THE THE THE in German");
+            Debug.Log("DIE DIE DIE (That means THE THE THE in German)");
         }
         UpdateHealthbar();
     }

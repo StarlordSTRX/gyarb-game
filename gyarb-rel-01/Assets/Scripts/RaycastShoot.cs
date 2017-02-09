@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Threading;
 
 public class RaycastShoot : MonoBehaviour
 {
 
+    public GameObject[] bullets;
+    public int amountOfBullets;
 
     public int gunDamage = 1;
     public float fireRate = .25f;
@@ -27,13 +30,18 @@ public class RaycastShoot : MonoBehaviour
         laserLine = GetComponent<LineRenderer>();
         gunAudio = GetComponent<AudioSource>();
         fpsCam = GetComponentInParent<Camera>();
+
+        BulletCounter();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R)) {
+            Reloader();
+        }
 
-        if (Input.GetButtonDown("Fire1") && Time.time > nextFire)
+        if (Input.GetButtonDown("Fire1") && Time.time > nextFire && amountOfBullets > 0)
         {
             nextFire = Time.time + fireRate;
             StartCoroutine(ShotEffect());
@@ -61,6 +69,11 @@ public class RaycastShoot : MonoBehaviour
             {
                 laserLine.SetPosition(1, rayOrigin + (fpsCam.transform.forward * weaponRange));
             }
+
+            //BULLET CODE
+            bullets[amountOfBullets].SetActive(false);
+            BulletCounter();
+
         }
     }
 
@@ -70,5 +83,34 @@ public class RaycastShoot : MonoBehaviour
         laserLine.enabled = true;
         yield return shotDuration;
         laserLine.enabled = false;
+    }
+
+    IEnumerator ReloadDelay(int reloadTime)
+    {
+        yield return new WaitForSeconds(reloadTime);
+    }
+
+    public void BulletCounter() {
+       amountOfBullets = -1;
+        foreach (GameObject bullet in bullets) {
+            if (bullet.activeSelf)
+            {
+                amountOfBullets++;
+            }
+        }
+        if (amountOfBullets <= 0)
+        {
+            Debug.Log("Out of bullets");
+        }
+    }
+
+    public void Reloader()
+    {
+        foreach (GameObject bullet in bullets)
+        {
+            bullet.SetActive(true);
+            ReloadDelay(4);
+        }
+        amountOfBullets = bullets.Length - 1;
     }
 }
