@@ -8,6 +8,9 @@ public class RaycastShoot : MonoBehaviour
     public GameObject[] bullets;
     public int amountOfBullets;
 
+    public bool isReloading = false;
+    public GameObject GunRotation;
+
     public int gunDamage = 1;
     public float fireRate = .25f;
     public float weaponRange = 50f;
@@ -16,7 +19,7 @@ public class RaycastShoot : MonoBehaviour
 
 
     private Camera fpsCam;
-    private WaitForSeconds shotDuration = new WaitForSeconds(.07f); //decleared here to optimize memory preformance
+    private WaitForSeconds shotDuration = new WaitForSeconds(.07f);
     private AudioSource gunAudio;
     private LineRenderer laserLine;
     private float nextFire;
@@ -30,18 +33,18 @@ public class RaycastShoot : MonoBehaviour
         laserLine = GetComponent<LineRenderer>();
         gunAudio = GetComponent<AudioSource>();
         fpsCam = GetComponentInParent<Camera>();
-
+        GunRotation = GameObject.FindGameObjectWithTag("GunRotation");
         BulletCounter();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) {
+        if (Input.GetKeyDown(KeyCode.R) && isReloading != true) {
             Reloader();
         }
 
-        if (Input.GetButtonDown("Fire1") && Time.time > nextFire && amountOfBullets > 0)
+        if (Input.GetButtonDown("Fire1") && Time.time > nextFire && amountOfBullets > -1 && isReloading != true)
         {
             nextFire = Time.time + fireRate;
             StartCoroutine(ShotEffect());
@@ -85,9 +88,49 @@ public class RaycastShoot : MonoBehaviour
         laserLine.enabled = false;
     }
 
-    IEnumerator ReloadDelay(int reloadTime)
+    IEnumerator ReloadDelay(float reloadTime, int pos)
     {
-        yield return new WaitForSeconds(reloadTime);
+        foreach (GameObject bullet in bullets)
+        {
+            if (bullet.activeSelf == true)
+            { pos++; }
+        }
+        while (true)
+        {
+            if (pos != bullets.Length)
+            {
+                bullets[pos].SetActive(true);
+                pos++;
+                yield return new WaitForSeconds(reloadTime);
+            }
+            else
+            {
+                isReloading = false;
+                Debug.Log("Reaload Complete!");
+                StartCoroutine(ReloadAnimation(0.001f, false));
+                break;
+            }
+        }
+    }
+
+    IEnumerator ReloadAnimation(float reloadTime, bool up) {
+        
+        if (up)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                GunRotation.transform.rotation *= Quaternion.Euler(-4.5f, 0, 0);
+                yield return new WaitForSeconds(reloadTime);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                GunRotation.transform.rotation *= Quaternion.Euler(4.5f, 0, 0);
+                yield return new WaitForSeconds(reloadTime);
+            }
+        }
     }
 
     public void BulletCounter() {
@@ -98,7 +141,8 @@ public class RaycastShoot : MonoBehaviour
                 amountOfBullets++;
             }
         }
-        if (amountOfBullets <= 0)
+        Debug.Log("Current: " + amountOfBullets);
+        if (amountOfBullets < 0)
         {
             Debug.Log("Out of bullets");
         }
@@ -106,11 +150,10 @@ public class RaycastShoot : MonoBehaviour
 
     public void Reloader()
     {
-        foreach (GameObject bullet in bullets)
-        {
-            bullet.SetActive(true);
-            ReloadDelay(4);
-        }
+        //GunRotation.transform.rotation *= Quaternion.Euler(-45, 0, 0);
+        StartCoroutine(ReloadAnimation(0.001f, true));
+        isReloading = true;
+        StartCoroutine(ReloadDelay(0.5f, 0));
         amountOfBullets = bullets.Length - 1;
     }
 }
