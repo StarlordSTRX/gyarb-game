@@ -147,10 +147,9 @@ public class RaycastShoot : MonoBehaviour
                 amountOfBullets++;
             }
         }
-        Debug.Log("Current: " + amountOfBullets);
         if (amountOfBullets < 0)
         {
-            Debug.Log("Out of bullets");
+            Debug.Log("Out of bullets!");
             StartCoroutine(AutoReload());
         }
     }
@@ -158,8 +157,8 @@ public class RaycastShoot : MonoBehaviour
     public void Reloader()
     {
         //GunRotation.transform.rotation *= Quaternion.Euler(-45, 0, 0);
-        StartCoroutine(ReloadAnimation(0.001f, true));
         isReloading = true;
+        StartCoroutine(ReloadAnimation(0.001f, true));
         StartCoroutine(ReloadDelay(0.5f, 0));
         amountOfBullets = bullets.Length - 1;
     }
