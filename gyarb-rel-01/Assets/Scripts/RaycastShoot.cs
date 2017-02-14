@@ -133,6 +133,12 @@ public class RaycastShoot : MonoBehaviour
         }
     }
 
+    IEnumerator AutoReload()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Reloader();
+    }
+
     public void BulletCounter() {
        amountOfBullets = -1;
         foreach (GameObject bullet in bullets) {
@@ -145,6 +151,7 @@ public class RaycastShoot : MonoBehaviour
         if (amountOfBullets < 0)
         {
             Debug.Log("Out of bullets");
+            StartCoroutine(AutoReload());
         }
     }
 
