@@ -19,4 +19,9 @@ public class MenuButtons : MonoBehaviour {
         Application.Quit();
         Debug.Log("We Quit!");
     }
+
+    public void LevelSelect() 
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
 }

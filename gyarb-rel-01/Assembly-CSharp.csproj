@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ActivateGenerator.cs" />
      <Compile Include="Assets\Scripts\CompassPoint.cs" />
+     <Compile Include="Assets\Scripts\CreditsReturn.cs" />
      <Compile Include="Assets\Scripts\DamageScriptExample.cs" />
      <Compile Include="Assets\Scripts\Healthbar.cs" />
      <Compile Include="Assets\Scripts\MenuButtons.cs" />
