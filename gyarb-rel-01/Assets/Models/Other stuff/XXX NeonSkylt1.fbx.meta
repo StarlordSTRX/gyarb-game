@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 81da2bc374faf0f43903cc940e548e3b
+timeCreated: 1490089914
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: group8
+    100002: pasted__group96
+    100004: pasted__group96_pasted__pasted__curve1
+    100006: pasted__pasted__curve1
+    100008: pasted__pasted__curve2
+    100010: pasted__pasted__curve3
+    100012: pasted__pasted__curve4
+    100014: pasted__pasted__extrudedSurface12
+    100016: pasted__pasted__extrudedSurface13
+    100018: pasted__pasted__extrudedSurface14
+    100020: pasted__pasted__extrudedSurface15
+    100022: pasted__pasted__extrudedSurface16
+    100024: pasted__pasted__extrudedSurface17
+    100026: pasted__pasted__extrudedSurface18
+    100028: pasted__pasted__extrudedSurface19
+    100030: pasted__pasted__extrudedSurface20
+    100032: pasted__pasted__extrudedSurface21
+    100034: pasted__pasted__group2
+    100036: pasted__pasted__pasted__extrudedSurface10
+    100038: pasted__pasted__pasted__extrudedSurface12
+    100040: pasted__pasted__pasted__extrudedSurface13
+    100042: pasted__pasted__pasted__extrudedSurface14
+    100044: pasted__pasted__pasted__extrudedSurface15
+    100046: pasted__pasted__pasted__extrudedSurface16
+    100048: pasted__pasted__pasted__extrudedSurface17
+    100050: pasted__pasted__pasted__extrudedSurface18
+    100052: pasted__pasted__pasted__extrudedSurface19
+    100054: pasted__pasted__pasted__extrudedSurface20
+    100056: pasted__pasted__pasted__extrudedSurface21
+    100058: pasted__pasted__pasted__extrudedSurface22
+    100060: pasted__pasted__pasted__extrudedSurface23
+    100062: pasted__pasted__pasted__extrudedSurface24
+    100064: pasted__pasted__pasted__extrudedSurface25
+    100066: pasted__pasted__pasted__extrudedSurface26
+    100068: pasted__pasted__pasted__extrudedSurface27
+    100070: pasted__pasted__pasted__extrudedSurface28
+    100072: pasted__pasted__pasted__extrudedSurface29
+    100074: pasted__pasted__pasted__extrudedSurface30
+    100076: pasted__pasted__pasted__extrudedSurface31
+    100078: pasted__pasted__pasted__extrudedSurface32
+    100080: //RootNode
+    400000: group8
+    400002: pasted__group96
+    400004: pasted__group96_pasted__pasted__curve1
+    400006: pasted__pasted__curve1
+    400008: pasted__pasted__curve2
+    400010: pasted__pasted__curve3
+    400012: pasted__pasted__curve4
+    400014: pasted__pasted__extrudedSurface12
+    400016: pasted__pasted__extrudedSurface13
+    400018: pasted__pasted__extrudedSurface14
+    400020: pasted__pasted__extrudedSurface15
+    400022: pasted__pasted__extrudedSurface16
+    400024: pasted__pasted__extrudedSurface17
+    400026: pasted__pasted__extrudedSurface18
+    400028: pasted__pasted__extrudedSurface19
+    400030: pasted__pasted__extrudedSurface20
+    400032: pasted__pasted__extrudedSurface21
+    400034: pasted__pasted__group2
+    400036: pasted__pasted__pasted__extrudedSurface10
+    400038: pasted__pasted__pasted__extrudedSurface12
+    400040: pasted__pasted__pasted__extrudedSurface13
+    400042: pasted__pasted__pasted__extrudedSurface14
+    400044: pasted__pasted__pasted__extrudedSurface15
+    400046: pasted__pasted__pasted__extrudedSurface16
+    400048: pasted__pasted__pasted__extrudedSurface17
+    400050: pasted__pasted__pasted__extrudedSurface18
+    400052: pasted__pasted__pasted__extrudedSurface19
+    400054: pasted__pasted__pasted__extrudedSurface20
+    400056: pasted__pasted__pasted__extrudedSurface21
+    400058: pasted__pasted__pasted__extrudedSurface22
+    400060: pasted__pasted__pasted__extrudedSurface23
+    400062: pasted__pasted__pasted__extrudedSurface24
+    400064: pasted__pasted__pasted__extrudedSurface25
+    400066: pasted__pasted__pasted__extrudedSurface26
+    400068: pasted__pasted__pasted__extrudedSurface27
+    400070: pasted__pasted__pasted__extrudedSurface28
+    400072: pasted__pasted__pasted__extrudedSurface29
+    400074: pasted__pasted__pasted__extrudedSurface30
+    400076: pasted__pasted__pasted__extrudedSurface31
+    400078: pasted__pasted__pasted__extrudedSurface32
+    400080: //RootNode
+    2300000: pasted__group96_pasted__pasted__curve1
+    3300000: pasted__group96_pasted__pasted__curve1
+    4300000: pasted__group96_pasted__pasted__curve1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
