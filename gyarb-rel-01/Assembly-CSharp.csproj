@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\RaycastShoot.cs" />
      <Compile Include="Assets\Scripts\ShootableEntity.cs" />
      <Compile Include="Assets\Scripts\displayUI.cs" />
+     <Compile Include="Assets\Scripts\lvlSelect.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
